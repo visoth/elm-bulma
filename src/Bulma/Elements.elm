@@ -296,9 +296,9 @@ easyButton mods attrs msg str
     myButtons : Html Msg
     myButtons
       = buttons Left []
-        [ button { buttonModifiers | color = Success } [ text "Save changes"      ]
-        , button { buttonModifiers | color = Primary } [ text "Save and continue" ]
-        , button { buttonModifiers | color = Danger  } [ text "Cancel"            ]
+        [ button { buttonModifiers | color = Success } [] [ text "Save changes"      ]
+        , button { buttonModifiers | color = Primary } [] [ text "Save and continue" ]
+        , button { buttonModifiers | color = Danger  } [] [ text "Cancel"            ]
         ]
 -}
 buttons: HorizontalAlignment -> List (Attribute msg) -> List (Button msg) -> Html msg
@@ -315,9 +315,9 @@ buttons alignment
     myConnectedButtons : Html Msg
     myConnectedButtons
       = connectedButtons Left []
-        [ button   buttonModifiers                     [ text "Yes"   ]
-        , button { buttonModifiers | color = Primary } [ text "Maybe" ]
-        , button   buttonModifiers                     [ text "No"    ]
+        [ button   buttonModifiers                     [] [ text "Yes"   ]
+        , button { buttonModifiers | color = Primary } [] [ text "Maybe" ]
+        , button   buttonModifiers                     [] [ text "No"    ]
         ]
 -}
 connectedButtons: HorizontalAlignment -> List (Attribute msg) -> List (Button msg) -> Html msg
